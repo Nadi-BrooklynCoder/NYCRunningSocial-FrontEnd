@@ -3,21 +3,25 @@ import User from "./User";
 
 const API = import.meta.env.VITE_API_URL;
 
-function Users () {
-    const [users, setUsers] = useState([]);
+function Users() {
+  const [users, setUsers] = useState(() => {
+    const savedUsers = localStorage.getItem("users");
+    return savedUsers ? JSON.parse(savedUsers) : [];
+  });
 
-    useEffect(() => {
-      fetch(`${API}/users`)
-      .then((response) => {
-        return response.json();
-      })
+  useEffect(() => {
+    fetch(`${API}/users`)
+      .then((response) => response.json())
       .then((responseJSON) => {
         setUsers(responseJSON);
+        localStorage.setItem("users", JSON.stringify(responseJSON));
       })
       .catch((error) => console.error(error));
   }, []);
 
-      return (
+  return (
+    <div>
+      {users.length > 0 ? (
         <table>
           <thead>
             <tr>
@@ -27,13 +31,18 @@ function Users () {
             </tr>
           </thead>
           <tbody>
-          {users.map((user) => {
-              return <User key={user.id} user={user} />;
-            })}
+            {users.map((user) => (
+              <User key={user.id} user={user} />
+            ))}
           </tbody>
         </table>
-      );
-      
+      ) : (
+        <div>
+          <p>No runners found. <Link to="/add-runner">Add a runner</Link></p>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Users;
