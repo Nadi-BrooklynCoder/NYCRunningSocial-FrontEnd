@@ -6,7 +6,6 @@ export default function NavBar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleSignOut = () => {
-    // Logic to handle sign out
     setIsLoggedIn(false);
   };
 

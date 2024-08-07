@@ -38,7 +38,7 @@ function Users() {
         </table>
       ) : (
         <div>
-          <p>No runners found. <Link to="/add-runner">Add a runner</Link></p>
+          <p>No runners found. <Link to="/users/new">Add a runner</Link></p>
         </div>
       )}
     </div>
