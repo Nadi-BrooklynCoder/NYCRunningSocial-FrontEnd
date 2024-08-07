@@ -8,17 +8,14 @@ function Users () {
 
     useEffect(() => {
       fetch(`${API}/users`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((responseJSON) => {
-          setUsers(responseJSON);
-        })
-        .catch((error) => console.error(error));
-    }, []);
+      .then((response) => {
+        return response.json();
+      })
+      .then((responseJSON) => {
+        setUsers(responseJSON);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
       return (
         <table>
@@ -30,9 +27,9 @@ function Users () {
             </tr>
           </thead>
           <tbody>
-            {Array.isArray(users) && users.map((user) => (
-              <User key={user.id} user={user} />
-            ))}
+          {users.map((user) => {
+              return <User key={user.id} user={user} />;
+            })}
           </tbody>
         </table>
       );
