@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-image: url('/src/images/central-park-running-trail.jpg');
   background-size: cover;
-  background-repeat: no repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-color: hsl(0, 0%, 100%);
   color: #333;
