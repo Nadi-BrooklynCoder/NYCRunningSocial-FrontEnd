@@ -2,7 +2,7 @@ body {
   font-family: 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('/src/images/central-park-running-trail.jpg');
+  /* background-image: url('/src/images/central-park-running-trail.jpg'); */
   background-size: cover;
   background-repeat: repeat;
   background-position: center center;
