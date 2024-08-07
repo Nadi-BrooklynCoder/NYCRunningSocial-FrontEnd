@@ -37,7 +37,7 @@ NYC Running Social is an application for runners to meet, form running groups, a
 ## Links
 - [Backend Repository](https://github.com/Nadi-BrooklynCoder/NYCRunningSocial-Backend)
 - [Deployed Backend URL](https://nycrunningsocial-backend.onrender.com/)
-[Deployed Frontend URL](https://nycrunningsocial.netlify.app/)
+- [Deployed Frontend URL](https://nycrunningsocial.netlify.app/)
 - [DB Board](https://dbdiagram.io/d/nycrunningsocial-66ab92d58b4bb5230ef8a381)
 
 ## Features
