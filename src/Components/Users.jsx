@@ -17,22 +17,23 @@ function Users () {
           .catch((error) => console.error(error));
       }, []);
 
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>Profile Picture</th>
-          <th>Username</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {users.map((user) => (
-          <User key={user.id} user={user} />
-        ))}
-      </tbody>
-    </table>
-  );
+      return (
+        <table>
+          <thead>
+            <tr>
+              <th>Profile Picture</th>
+              <th>Username</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Array.isArray(users) && users.map((user) => (
+              <User key={user.id} user={user} />
+            ))}
+          </tbody>
+        </table>
+      );
+      
 }
 
 export default Users;
