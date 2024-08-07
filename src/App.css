@@ -1,0 +1,243 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('./images/central-park-running-trail.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #fff;
+  color: #333;
+}
+
+nav {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+nav a:hover {
+  color: #f00;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+nav button:hover {
+  background-color: #c00;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 2rem;
+}
+
+.Index {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+.Show {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.Show h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+article {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+article h5, article h6 {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+article img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.showNavigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.showNavigation button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.showNavigation button:hover {
+  background-color: #c00;
+}
+
+.Edit, .New {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.Edit form, .New form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Edit form label, .New form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.Edit form input[type="text"], .New form input[type="text"],
+.Edit form input[type="email"], .New form input[type="email"],
+.Edit form input[type="password"], .New form input[type="password"],
+.Edit form input[type="number"], .New form input[type="number"],
+.Edit form input[type="date"], .New form input[type="date"],
+.Edit form input[type="url"], .New form input[type="url"],
+.Edit form input[type="submit"], .New form input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Edit form input[type="text"]:focus, .New form input[type="text"]:focus,
+.Edit form input[type="email"]:focus, .New form input[type="email"]:focus,
+.Edit form input[type="password"]:focus, .New form input[type="password"]:focus,
+.Edit form input[type="number"]:focus, .New form input[type="number"]:focus,
+.Edit form input[type="date"]:focus, .New form input[type="date"]:focus,
+.Edit form input[type="url"]:focus, .New form input[type="url"]:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.Edit form input[type="submit"], .New form input[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Edit form input[type="submit"]:hover, .New form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.Location {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.Location h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.Location h5 {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.Location button {
+  background-color: #f00;
+  color: #fff;
+
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
