@@ -7,15 +7,18 @@ function Users () {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(`${API}/users`)
-          .then((response) => {
-            return response.json();
-          })
-          .then((responseJSON) => {
-            setUsers(responseJSON);
-          })
-          .catch((error) => console.error(error));
-      }, []);
+      fetch(`${API}/users`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((responseJSON) => {
+          setUsers(responseJSON);
+        })
+        .catch((error) => console.error(error));
+    }, []);
 
       return (
         <table>
