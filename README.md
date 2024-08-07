@@ -43,7 +43,7 @@ NYC Running Social is an application for runners to meet, form running groups, a
 ## Features
 - User registration and authentication
 - View and edit user profiles
-
+- Add and delete running locations
 
 ## Some Stretch Goals
 - Search for running locations
